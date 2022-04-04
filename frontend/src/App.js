@@ -43,7 +43,8 @@ function App() {
         </nav>
         <div className="container mt-3">
           <Routes>
-            <Route exact path="/" element={<RestaurantsList/>} />
+            <Route path="/" element={<RestaurantsList/>} />
+            <Route path="/restaurants/*" element={<RestaurantsList/>} />
             <Route path="/restaurants/:id/review" element={<AddReview />}/>
             <Route path="/restaurants/:id" element={<Restaurant />}/>
             <Route path="/login" element={<Login login={login} />}/>
